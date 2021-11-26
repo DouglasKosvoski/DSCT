@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com', crossorigin />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap' />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  </head>
+  <body>
+    <!-- Background image -->
+    <img src="/images/nightsky.jpg" id="background-image" class="background-image" alt="background image">
+
+    <div class="title">
+      <h1 id="page-title"><%= title %></h1>
+      <p id="page-description">Welcome to <%= title %></p>
+    </div>
+
+    <div id="timeline" class="timeline">
+      <!-- Left Side panel -->
+      <div id="cl" class="container left">
+        <div class="content">
+          <h2>{{ title }}</h2>
+          <p>{{ content }}</p>
+        </div>
+      </div>
+
+      <!-- Right Side panel -->
+      <div id="cr" class="container right">
+        <div class="content">
+          <h2>{{ title }}</h2>
+          <p>{{ content }}</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var cl = new Vue({
+        el: '#cl',
+        data: {
+          title: '2011!',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        }
+      })
+      var cr = new Vue({
+        el: '#cr',
+        data: {
+          title: '2011!',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        }
+      })
+    </script>
+  </body>
+</html>
